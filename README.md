@@ -1,12 +1,12 @@
-## real-time-stock-trading-engine
+# real-time-stock-trading-engine
 
 A Solution to the Interview Question of Onymos Inc.
 
-# Author
+## Author
 
 Guantong Zhang
 
-# Requirements
+## Requirements
 
 Implement a real-time Stock trading engine for matching Stock Buys with Stock Sells.
 1. Write an ‘addOrder’ function that will have the following parameters:
@@ -20,7 +20,7 @@ Implement a real-time Stock trading engine for matching Stock Buys with Stock Se
       Do not use any dictionaries, maps or equivalent data structures. Essentially there should be no ‘import’-s nor ‘include’-s nor similar construct relevant to the programming language you are using that provides you dictionary, map or equivalent data structure capability. In essence, you are writing the entire code. Standard language-specific non data structure related items are ok, but try to avoid as best as you can.
       Write your ‘matchOrder’ function with a time-complexity of O(n), where 'n' is the number of orders in the Stock order book.
 
-# Usage
+## Usage
 
     from src.order_book import OrderBook
 
@@ -39,7 +39,7 @@ Implement a real-time Stock trading engine for matching Stock Buys with Stock Se
     print(order_book)
 
 
-# Contact
+## Contact
 
 If you have any questions or suggestions, feel free to reach out:
 Email: guantonz@andrew.cmu.edu / gtzhang2002@gmail.com
