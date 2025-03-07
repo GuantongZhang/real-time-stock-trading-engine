@@ -20,7 +20,7 @@ Implement a real-time Stock trading engine for matching Stock Buys with Stock Se
       Do not use any dictionaries, maps or equivalent data structures. Essentially there should be no ‘import’-s nor ‘include’-s nor similar construct relevant to the programming language you are using that provides you dictionary, map or equivalent data structure capability. In essence, you are writing the entire code. Standard language-specific non data structure related items are ok, but try to avoid as best as you can.
       Write your ‘matchOrder’ function with a time-complexity of O(n), where 'n' is the number of orders in the Stock order book.
 
-## Usage
+## Basic Usage
 
     from src.order_book import OrderBook
 
@@ -37,7 +37,48 @@ Implement a real-time Stock trading engine for matching Stock Buys with Stock Se
 
     # Print the remaining orders
     print(order_book)
+    
+### Output
+    Order added: ('Sell', 'AAPL', 100, 140)
+    Order added: ('Sell', 'AAPL', 50, 130)
+    Order added: ('Buy', 'AAPL', 120, 150)
+    Matched 50 shares of AAPL at Buy=150, Sell=130
+    Matched 70 shares of AAPL at Buy=150, Sell=140
+    Buy Orders:
+      ('Buy', 'AAPL', 0, 150)
+    Sell Orders:
+      Ticker: AAPL
+        ('Sell', 'AAPL', 30, 140)
 
+## Concurrent Usage
+    from src.simulator import run_concurrent_test
+    from src.order_book import OrderBook
+    
+    # Create an order book
+    order_book = OrderBook()
+    
+    # Run the concurrent test
+    run_concurrent_test(order_book, num_threads=10, orders_per_thread=100)
+    
+    # Print the remaining orders
+    print(order_book)
+    
+### Output
+    Concurrent test completed.
+    Buy Orders:
+      ('Buy', 'AAPL', 50, 150)
+      ('Buy', 'GOOG', 100, 1250)
+    Sell Orders:
+      Ticker: AAPL
+        ('Sell', 'AAPL', 30, 140)
+      Ticker: GOOG
+        ('Sell', 'GOOG', 50, 1200)
+    
+## Testing
+
+To run the test, use the following command:
+
+    python -m pytest tests/test.py -v
 
 ## Contact
 
