@@ -42,5 +42,7 @@ Implement a real-time Stock trading engine for matching Stock Buys with Stock Se
 ## Contact
 
 If you have any questions or suggestions, feel free to reach out:
+
 Email: guantonz@andrew.cmu.edu / gtzhang2002@gmail.com
+
 GitHub: GuantongZhang
