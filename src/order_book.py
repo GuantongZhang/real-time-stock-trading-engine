@@ -41,7 +41,6 @@ class OrderBook:
 
     def match_order(self):
         """Match Buy orders with the best available Sell orders for all tickers."""
-        #match_found = False  # track if any match is found
 
         while True:
             # THE LOGIC HERE NEED TO BE MODIFIED IF WE WANT TO KEEP UNRESOLVED BUY ORDERS AFTER MATCHING.
@@ -75,8 +74,3 @@ class OrderBook:
                     self.add_order(buy_type, buy_ticker, buy_qty - matched_qty, buy_price, display=False)
                 if sell_qty > matched_qty:
                     self.add_order(sell_type, sell_ticker, sell_qty - matched_qty, sell_price, display=False)
-
-                #match_found = True  # a match was found
-
-        #if not match_found:
-        #    print("No more matches possible.")
